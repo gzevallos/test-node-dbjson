@@ -13,9 +13,11 @@ app.use(express.static('public'));
 
 // routes
 const staticRoutes = require('./routes/static');
+const productsRouter = require('./routes/products');
 
 // muchas rutas ---- middleware
 app.use('/', staticRoutes);
+app.use('/productos', productsRouter);
 
 // ruta puntual
 app.get('*', (req, res) => {
@@ -23,4 +25,4 @@ app.get('*', (req, res) => {
 });
 
 
-app.listen(3030, () => console.log('Server is running...'));
+app.listen(3000, () => console.log('Server is running...'));
