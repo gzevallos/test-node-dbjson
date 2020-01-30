@@ -1,0 +1,12 @@
+<%- include('../partials/header',{pageTitle: 'Productos'}) %>
+<h1><%= product.name %> </h1>
+<ul>
+   <li>
+      <b>Precio: </b><%= product.price %><br>
+      <b>Categoría: </b><%= product.category %><br>
+   </li>
+</ul>
+<form action="/productos/<%= product.id %>?_method=DELETE" method="post">
+   <button type="submit">Borrar producto</button>
+</form>
+<%- include('../partials/footer') %>

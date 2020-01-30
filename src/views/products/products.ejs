@@ -1,0 +1,14 @@
+<%- include('../partials/header',{pageTitle: 'Productos'}) %>
+<h1>Productos</h1>
+<a href="/productos/create">Crear producto</a>
+<ul>
+   <% allProducts.forEach(product => { %>
+   <li>
+      <b>Nombre: </b><%= product.name %><br>
+      <b>Precio: </b><%= product.price %><br>
+      <b>Categoría: </b><%= product.category %><br>
+      <a href="productos/detalle/<%= product.id %> ">VER MAS</a>
+   </li><br>
+   <% }) %> 
+</ul>
+<%- include('../partials/footer') %>

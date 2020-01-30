@@ -1,0 +1,13 @@
+<%- include('../partials/header', {pageTitle: 'Acerca de'}) %>
+<h1>Crear producto</h1>
+<form action="/productos/create" method="POST">
+   <input type="text" name="name" id="" placeholder="Nombre"><br>
+   <input type="text" name="price" id="" placeholder="Price"><br>
+   <select name="category" id="">
+      <option value="home">Casa</option>
+      <option value="garden">Jardín</option>
+      <option value="electronic">Electrónicos</option>
+   </select><br><br>
+   <button type="submit">Crear</button>
+</form>
+<%- include('../partials/footer') %>
