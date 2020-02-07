@@ -1,0 +1,13 @@
+<%- include('../partials/header', {pageTitle: 'Acerca de'}) %>
+<h1>Crear producto</h1>
+<form action="/productos/edit/<%= product.id %>?_method=PUT" method="POST">
+   <input type="text" name="name" id="" placeholder="Nombre" value="<%= product.name %>"><br>
+   <input type="text" name="price" id="" placeholder="Price" value="<%= product.price %>"><br>
+   <select name="category" id="">
+      <option value="home">Casa</option>
+      <option value="garden">Jardín</option>
+      <option value="electronic">Electrónicos</option>
+   </select><br><br>
+   <button type="submit">Editar</button>
+</form>
+<%- include('../partials/footer') %>

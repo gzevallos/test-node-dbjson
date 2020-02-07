@@ -8,5 +8,8 @@
 </ul>
 <form action="/productos/<%= product.id %>?_method=DELETE" method="post">
    <button type="submit">Borrar producto</button>
+</form><br><br>
+<form action="/productos/edit/<%= product.id %>" method="GET">
+   <button type="submit">Editar producto</button>
 </form>
 <%- include('../partials/footer') %>

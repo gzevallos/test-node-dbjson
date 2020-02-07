@@ -1,1 +1,26 @@
-[]
+[
+ {
+  "id": "1",
+  "name": "primero ",
+  "price": "asd    ",
+  "category": "home"
+ },
+ {
+  "id": "2",
+  "name": "askdñlasd asdasd",
+  "price": "123            ",
+  "category": "home"
+ },
+ {
+  "id": "3",
+  "name": "aslkdjsalkdjalsdkjas",
+  "price": "12312   ",
+  "category": "home"
+ },
+ {
+  "id": "4",
+  "name": "gonzalo añldskañlsd",
+  "price": "123      ",
+  "category": "home"
+ }
+]

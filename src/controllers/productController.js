@@ -13,7 +13,7 @@ const controller = {
       // res.send(product);
       if(product){
          return res.render('products/detail', { product });
-      }else{
+      } else {
          return res.render('error');
       }
    },
@@ -25,6 +25,23 @@ const controller = {
    delete: (req, res) => {
       productsModel.destroy(req.params.id);
       return res.redirect('/productos');
+   },
+   edit: (req, res) => {
+      let product = productsModel.findByPK(req.params.id);
+      if(product){
+         return res.render('products/edit', { product });
+      } else {
+         return res.render('error');
+      }
+   },
+   update: (req, res) => {
+      let product = productsModel.findByPK(req.params.id);
+      if(product){
+         productsModel.update(req.body, req.params.id);
+         return res.redirect('/productos');
+      }else{
+         return res.render('error');
+      }
    }
 }
 

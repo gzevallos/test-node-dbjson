@@ -33,17 +33,19 @@ class JsonModel {
 
       return allData.find( product => product.id == id);
    }
-
-   update () {
-
-   }
-
+   
    destroy (id) {
       let allData = this.getAll();
 
       allData = allData.filter(product => product.id != id);
 
       fs.writeFileSync(this.modelPath, JSON.stringify(allData, null, ' '));
+   }
+
+   update (newProduct, id) {
+      let allData = this.getAll();
+      let newData = allData.map(element => element.id == id ? element = { id, ...newProduct } : element);
+      fs.writeFileSync(this.modelPath, JSON.stringify(newData, null, ' '));
    }
 }
 
